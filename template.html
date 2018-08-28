@@ -1,0 +1,28 @@
+<head>
+    <title>Quick QR Code</title>
+    <style>
+     #main{
+         display:grid;
+         height:100%;
+     }
+     #qrcode{
+         justify-self:center;
+     }
+     #url{
+         margin-top:auto;
+     }
+    </style>
+</head>
+<div id=main>
+    <svg id="qrcode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <input id="url" type="text" placeholder="http://example.org"/>
+</div>
+<script type="text/javascript">
+ // qrcode.min.js HERE
+ var qrcode=new QRCode(document.getElementById("qrcode"), {useSVG:true});
+ var elUrl=document.getElementById("url");
+ elUrl.onchange=function(){
+     qrcode.makeCode(elUrl.value)
+ };
+ elUrl.value=document.referrer
+</script>
