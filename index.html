@@ -4,17 +4,18 @@
 <a id='result'>Bookmark this link</a>
 <script type='text/javascript'>
  function slurp_local_file(file) {
-     var xhr = new XMLHttpRequest();
-     xhr.open('GET', file, false);
-     xhr.send();
-     return xhr.response;
+     var xhr = new XMLHttpRequest()
+     xhr.open('GET', file, false)
+     xhr.send()
+     return xhr.response
  }
  var main_lines = slurp_local_file('main.template.html').split('\n')
- for (var i = 0; i < main_lines.length; i++)
-     main_lines[i] = main_lines[i].trimStart();
- var i = main_lines.indexOf('// qrcode.min.js HERE')
- main_lines[i] = slurp_local_file('qrcodejs/qrcode.min.js')
+ for (var i = 0; i < main_lines.length; i++) {
+     main_lines[i] = main_lines[i].trimStart()
+ }
+ var qrcode_here_i = main_lines.indexOf('// qrcode.min.js HERE')
+ main_lines[qrcode_here_i] = slurp_local_file('qrcodejs/qrcode.min.js')
  var main = main_lines.join('')
  var url = 'data:text/html,' + encodeURIComponent(main)
- document.getElementById('result').href = url;
+ document.getElementById('result').href = url
 </script>

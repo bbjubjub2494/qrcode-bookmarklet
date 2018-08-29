@@ -15,13 +15,14 @@
     </style>
 </head>
 <div id=main>
-    <svg id="qrcode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"/>
-    <input id="url" type="text" placeholder="http://example.org"/>
+    <svg id='qrcode' xmlns='http://www.w3.org/2000/svg'>
+    </svg>
+    <input id='url' type='text' placeholder='http://example.org'>
 </div>
-<script type="text/javascript">
+<script type='text/javascript'>
  // qrcode.min.js HERE
- var qrcode=new QRCode(document.getElementById("qrcode"), {useSVG:true});
- var elUrl=document.getElementById("url");
+ var qrcode=new QRCode(document.getElementById('qrcode'),{useSVG:true});
+ var elUrl=document.getElementById('url');
  elUrl.onchange=function(){
      qrcode.makeCode(elUrl.value)
  };
