@@ -1,9 +1,7 @@
 language: minimal
 dist: bionic
-addons:
-  apt:
-    packages:
-      - closure-compiler
-      - minify
+sudo: true
 script:
+  - sudo apt update -y
+  - sudo apt install -y closure-compiler minify
   - bash make.sh
