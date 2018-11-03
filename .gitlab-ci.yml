@@ -1,6 +1,8 @@
+image: ubuntu:latest
+
 before_script:
-  - apt -y update
-  - apt -y instally closure-compiler minify
+  - apt-get -y update
+  - apt-get -y install closure-compiler minify
 
 url:
   script:
