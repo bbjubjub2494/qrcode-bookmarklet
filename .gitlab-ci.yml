@@ -1,0 +1,7 @@
+before_script:
+  - apt -y update
+  - apt -y instally closure-compiler minify
+
+url:
+  script:
+    - bash make.sh

@@ -1,7 +1,0 @@
-language: minimal
-dist: bionic
-sudo: true
-script:
-  - sudo apt update -y
-  - sudo apt install -y closure-compiler minify
-  - bash make.sh
