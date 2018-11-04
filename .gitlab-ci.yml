@@ -9,4 +9,7 @@ before_script:
 
 url:
   script:
-    - bash make.sh
+    - bash make_URL.sh
+  artifacts:
+    paths:
+      - URL

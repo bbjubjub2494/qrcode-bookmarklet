@@ -47,4 +47,4 @@ elUrl.onchange=function(){
 END
 }
 
-echo data:text/html,$(bookmarklet | minify --type html | urlescape)
+echo data:text/html,$(bookmarklet | minify --type html | urlescape) > URL
