@@ -1,5 +1,8 @@
 image: ubuntu:latest
 
+variables:
+  GIT_SUBMODULE_STRATEGY: normal
+
 before_script:
   - apt-get -y update
   - apt-get -y install closure-compiler minify
