@@ -39,11 +39,11 @@ END
 bookmarklet_js_script () {
   cat qrcodejs/qrcode.js
   cat <<END
-var qrcode=new QRCode(document.getElementById('qrcode'),{useSVG:true});
-var elUrl=document.getElementById('url');
-elUrl.onchange=function(){
+var qrcode = new QRCode(document.getElementById('qrcode'),{useSVG:true})
+var elUrl = document.getElementById('url')
+elUrl.onchange = function() {
     qrcode.makeCode(elUrl.value)
-};
+}
 END
 }
 
